@@ -1,5 +1,5 @@
 #include "GetUserInfo.h"
-int GetUserInfo()
+static int GetUserInfo(char *access_token)
     {
         CURL *curl;
         curl = curl_easy_init();
@@ -9,7 +9,7 @@ int GetUserInfo()
 
         curl_easy_setopt(curl,CURLOPT_URL,URL);
         curl_easy_setopt(curl,CURLOPT_POST,1L);
-        curl_easy_setopt(curl,CURLOPT_POSTFIELDS,OPTURL);
+        curl_easy_setopt(curl,CURLOPT_POSTFIELDS,USERINFOURL);
         curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1);
         curl_easy_setopt(curl,CURLOPT_VERBOSE,0L);
         curl_easy_setopt(curl,CURLOPT_HEADER,0L);

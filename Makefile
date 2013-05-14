@@ -7,4 +7,4 @@ GetAccessToken.o:GetAccessToken.h
 GetUserInfo.o:GetUserInfo.h
 	gcc -c GetUserInfo.c
 clean:
-	rm *flymake*;rm *.html;rm all;rm *.o;rm *~;rm \#*
+	rm *flymake*;rm *.html;rm all;rm *.o;rm *~;rm \#*;rm *.json

@@ -1,14 +1,14 @@
 #include "GetAccessToken.h"
-int GetAccessToken()
+static int GetAccessToken()
     {
         CURL *curl;
         curl = curl_easy_init();
         FILE *filename;
         filename = fopen("result.html","w");
  
-        curl_easy_setopt(curl,CURLOPT_URL,OPTURL);
+        curl_easy_setopt(curl,CURLOPT_URL,URL);
         curl_easy_setopt(curl,CURLOPT_POST,1L);
-        curl_easy_setopt(curl,CURLOPT_POSTFIELDS,ADDURL);
+        curl_easy_setopt(curl,CURLOPT_POSTFIELDS,URLFILDS);
         curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1);
         curl_easy_setopt(curl,CURLOPT_VERBOSE,0L);
         curl_easy_setopt(curl,CURLOPT_HEADER,0L);
