@@ -26,6 +26,7 @@ int GetUserInfo(char *access_token)
         curl_easy_cleanup(curl);
         curl_global_cleanup();
         fclose(filename);
+        free(str);
         return 0;
     }
 static size_t write_data(char *ptr,size_t size,size_t nmemb,void *userdata)
