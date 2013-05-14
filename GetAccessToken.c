@@ -2,10 +2,10 @@
 int GetAccessToken()
     {
         CURL *curl;
+        curl_global_init(CURL_GLOBAL_ALL);
         curl = curl_easy_init();
         FILE *filename;
         filename = fopen("result.html","w");
-        curl_global_init(CURL_GLOBAL_ALL);
         curl_easy_setopt(curl,CURLOPT_URL,URL);
         curl_easy_setopt(curl,CURLOPT_POST,1L);
         curl_easy_setopt(curl,CURLOPT_POSTFIELDS,URLFILDS);
@@ -16,6 +16,7 @@ int GetAccessToken()
         curl_easy_setopt(curl,CURLOPT_WRITEDATA,filename);
         curl_easy_perform(curl);
         curl_easy_cleanup(curl);
+        curl_global_cleanup();
         fclose(filename);
         return 0;
     }

@@ -24,6 +24,7 @@ int GetUserInfo(char *access_token)
         curl_easy_setopt(curl,CURLOPT_WRITEDATA,filename);
         curl_easy_perform(curl);
         curl_easy_cleanup(curl);
+        curl_global_cleanup();
         fclose(filename);
         return 0;
     }
