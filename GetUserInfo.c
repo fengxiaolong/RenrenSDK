@@ -11,7 +11,7 @@ int GetUserInfo(char *access_token)
         str = (char*)malloc(sizeof(char)*CHARACTER_SIZE);
         str = strcpy(str,USERINFOURL);
         str = strcat(str,access_token);
-        str = strcat(str,"&format=JSON&call_id=1.0&method=users.getInfo&fields=uid,sex,name,hometown_location");
+        str = strcat(str,"&format=JSON&call_id=1.0&method=users.getInfo&fields=uid,name,sex,star,zidou,vip,birthday,tinyurl,headurl,mainurl,hometown_location,work_history,university_history,email_hash,hs_info");
         filename = fopen("userinfo.json","w");
 
         curl_easy_setopt(curl,CURLOPT_URL,URL);
