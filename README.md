@@ -5,13 +5,13 @@ A SDK of renren.com written in pure c
 
   Ubuntu/Debian/MAC OS X都可以编译运行，SDK所依赖的库有cson，curl，
   sqlite3
-
   安装上述的库，在Ubuntu/Debian下都是用apt-get的方式可以轻松解决，
   [cson](http://fossil.wanderinghorse.net/repos/cson/index.cgi/wiki?name=download)
   需要到官网上看一下如何安装，可能你需要安装一下[fossil]()，可以到其官
   网上看下如何安装，支持windows，Linux，MAC OS X系统
 
 * 调用SDK需要注意的事项
+
   SDK中，所有的文件名称和这个文件中所代表的函数名称是一样的，所以你知道了这个文件的名
 字，你就知道了这个文件中所包含的函数的名字，然后根据文档，传入所需要的
 参数，你就可以获得服务器返回的值，这些值可能存在数据库里面，可能存在一
