@@ -25,7 +25,3 @@ static size_t write_data(char *ptr,size_t size,size_t nmemb,void *userdata)
         FILE *file = (FILE*)userdata;
         return fwrite(ptr,size,nmemb,file);
     }
-
-
-//234283%7C6.d33d4719c2359c91abe4c7d19a9339b5.2592000.1371092400-252633228
-//234283%7C6.d33d4719c2359c91abe4c7d19a9339b5.2592000.1371092400-252633228
