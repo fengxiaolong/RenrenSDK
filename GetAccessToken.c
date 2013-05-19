@@ -6,7 +6,7 @@ int GetAccessToken()
         curl = curl_easy_init();
         FILE *filename;
         filename = fopen("result.html","w");
-        curl_easy_setopt(curl,CURLOPT_URL,URL);
+        curl_easy_setopt(curl,CURLOPT_URL,URLL);
         curl_easy_setopt(curl,CURLOPT_POST,1L);
         curl_easy_setopt(curl,CURLOPT_POSTFIELDS,URLFILDS);
         curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1);
