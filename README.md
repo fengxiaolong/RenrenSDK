@@ -6,7 +6,7 @@ MAC OS X
 
 * install homebrew
 
-  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  ```ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"```
   关于homebrew的介绍可以看它的[官网](mxcl.github.io/homebrew/),它的主要功能就是让你像在Linux下一样
   通过命令行的方式来安装和卸载软件,如果出现编译的时候说找不到库的话,你
   需要把你安装的库,例如glib的目录添加到PATH变量中,添加的方法跟在Linux
@@ -14,11 +14,11 @@ MAC OS X
 
 * install sqlite3
 
-  brew install sqlite3
+  ```brew install sqlite3```
   
 * install json-glib
 
-  brew install json-glib
+  ```brew install json-glib```
 
   上面的语句会帮你把json-glib所依赖的所有库都自动安装好
   
@@ -27,11 +27,15 @@ Ubuntu/Debian
 
 * install sqlite3
 
-  apt-get install sqlite3
+  ```apt-get install sqlite3```
 
 * install json-glib
 
-  apt-get install build-essential libjson0 libjson0-dev libjson0-dbg
+  ```apt-get install build-essential libjson0 libjson0-dev libjson0-dbg
+  libjson-glib-1.0-0 libjson-glib-1.0-0-dev libjson-glib-1.0-0-dbg
+  libjson-glib-1.0-0-doc ```
+
+  如果你想看glib的文档,你可以通过浏览器浏览这个[网址](file:///usr/share/gtk-doc/html/json-glib/index.html)
  
 调用SDK需要注意的事项
 -----------
