@@ -22,7 +22,26 @@ int main(int arg,char **argv)
             }
         JsonNode *root;
         root = json_parser_get_root(parser);
-        
+        gboolean nodetype;
+        nodetype = JSON_NODE_TYPE(root);
+        printf("node type is %d\n",nodetype);
+        JsonObject *jsonobject;
+        jsonobject = json_object_new();
+        gboolean hasmember;
+        if(JSON_NODE_OBJECT == nodetype)
+            {
+                puts("object\n");
+                hasmember = json_object_has_member(jsonobject,"name");
+                if(hasmember)
+                    puts("has member\n");
+                else
+                    puts("has no member\n");
+                
+            }
+        if(JSON_NODE_ARRAY == nodetype)
+            {
+                puts("array\n");
+            }
         
         
         
