@@ -10,6 +10,7 @@ int main(int argc,char **argv)
         JsonNode *root;
         GError *error;
         error = NULL;
+        g_type_init();
         parser = json_parser_new();
         json_parser_load_from_file(parser,"userinfo.json",&error);
         if(error)
