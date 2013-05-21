@@ -9,4 +9,4 @@ brew会把json-glib所依赖的所有东西自动安装好
 
 * 编译时选项
 
-gcc main.c `pkg-config --cflags --libs`
+gcc main.c `pkg-config --cflags --libs json-glib-1.0`
