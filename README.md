@@ -1,16 +1,40 @@
 A SDK of renren.com written in pure c
 ===
 
-* 环境要求
+MAC OS X
+-------
 
-  Ubuntu/Debian/MAC OS X都可以编译运行，SDK所依赖的库有cson，curl，
-  sqlite3
-  安装上述的库，在Ubuntu/Debian下都是用apt-get的方式可以轻松解决，
-  [cson](http://fossil.wanderinghorse.net/repos/cson/index.cgi/wiki?name=download)
-  需要到官网上看一下如何安装，可能你需要安装一下[fossil]()，可以到其官
-  网上看下如何安装，支持windows，Linux，MAC OS X系统
+* install homebrew
 
-* 调用SDK需要注意的事项
+  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  关于homebrew的介绍可以看它的[官网](mxcl.github.io/homebrew/),它的主要功能就是让你像在Linux下一样
+  通过命令行的方式来安装和卸载软件,如果出现编译的时候说找不到库的话,你
+  需要把你安装的库,例如glib的目录添加到PATH变量中,添加的方法跟在Linux
+  下面是一样的.
+
+* install sqlite3
+
+  brew install sqlite3
+  
+* install json-glib
+
+  brew install json-glib
+
+  上面的语句会帮你把json-glib所依赖的所有库都自动安装好
+  
+Ubuntu/Debian
+---------
+
+* install sqlite3
+
+  apt-get install sqlite3
+
+* install json-glib
+
+  apt-get install build-essential libjson0 libjson0-dev libjson0-dbg
+ 
+调用SDK需要注意的事项
+-----------
 
   SDK中，所有的文件名称和这个文件中所代表的函数名称是一样的，所以你知道了这个文件的名
 字，你就知道了这个文件中所包含的函数的名字，然后根据文档，传入所需要的

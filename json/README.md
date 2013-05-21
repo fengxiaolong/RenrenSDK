@@ -1,4 +1,4 @@
-install json-glib on mac
+install json-glib on MAC OS X
 ========
 
 * brew install json-glib
@@ -7,6 +7,7 @@ brew是一个让你在mac上安装一些第三方库的工具，例如Linux的�
 
 brew会把json-glib所依赖的所有东西自动安装好
 
+install json-glib on Linux
 * 编译时选项
 
 gcc main.c `pkg-config --cflags --libs json-glib-1.0`
