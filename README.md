@@ -48,6 +48,8 @@ Ubuntu/Debian
 
 *document* 存放文档
 
+*nbproject* 这个文档是用netbeans IDE打开时候所产生的附加文档
+
 调用SDK需要注意的事项
 -----------
 
