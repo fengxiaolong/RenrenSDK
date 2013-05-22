@@ -36,7 +36,18 @@ Ubuntu/Debian
   libjson-glib-1.0-0-doc ```
 
   如果你想看glib的文档,你可以通过浏览器浏览这个[网址](file:///usr/share/gtk-doc/html/json-glib/index.html)
- 
+
+项目结构说明
+------------
+
+*include* 存放头文件,包括第三方库
+
+*src* 存放源码
+
+*test* 存放测试用例
+
+*document* 存放文档
+
 调用SDK需要注意的事项
 -----------
 
