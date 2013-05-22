@@ -15,9 +15,9 @@ int main(int arg,char **argv)
         json_parser_load_from_file(parser,"userinfo.json",&error);
         if(error)
             {
-                g_printf("error is %s\n",error->message);
+                g_print("error is %s\n",error->message);
                 g_error_free(error);
-                g_object_unref(parser);
+                g_objec [1;5Bt_unref] (parser);
                 return EXIT_FAILURE;
             }
         JsonNode *root;
@@ -33,7 +33,11 @@ int main(int arg,char **argv)
                 puts("object\n");
                 hasmember = json_object_has_member(jsonobject,"name");
                 if(hasmember)
-                    puts("has member\n");
+                  {
+                      puts("has member\n");
+                      jsonobject = json_node_get_object(root);
+                      puts(json_object_get_string_member(jsonobject,"name"));
+                  }
                 else
                     puts("has no member\n");
                 
