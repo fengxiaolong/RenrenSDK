@@ -31,6 +31,9 @@ int main(int argc,char **argv)
                 root = json_array_get_element(array,0);
                 if(JSON_NODE_HOLDS_OBJECT(root))
                     puts("hold object\n");
+                if(JSON_NODE_HOLDS_ARRAY(root))
+                    puts("hold array\n");
+                
             }
         else
             g_print("error\n");
