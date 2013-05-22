@@ -12,12 +12,12 @@ int main(int arg,char **argv)
         GError *error;
         //        g_type_init();
         parser = json_parser_new();
-        json_parser_load_from_file(parser,"userinfo.json",&error);
+        json_parser_load_from_file(parser,"info.json",&error);
         if(error)
             {
                 g_print("error is %s\n",error->message);
                 g_error_free(error);
-                g_objec [1;5Bt_unref] (parser);
+                g_object_unref(parser);
                 return EXIT_FAILURE;
             }
         JsonNode *root;
@@ -32,7 +32,7 @@ int main(int arg,char **argv)
         guint cc;
         cc = json_object_get_size(jsonobject);
         g_printf("this object size is %d\n",cc);
-        if(JSON_NODE_OBJECT == nodetype)
+        if(JSON_NODE_ARRAY == nodetype)
             {
                 puts("object\n");
                 hasmember = json_object_has_member(jsonobject,"name");
@@ -40,7 +40,7 @@ int main(int arg,char **argv)
 
                 {
                     puts("has member\n");
-                    JsonNode *newnode = json_object_get_member(jsonobject,"name");
+                    JsonNode *newnode = json_object_get_member(jsonobject,"uid");
                     g_print("the internal data type is %d\n",JSON_NODE_TYPE(newnode));
                     g_print("name is :%s\n",json_node_get_string(newnode));
                 }

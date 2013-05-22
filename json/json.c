@@ -1,38 +1,38 @@
 #include <stdio.h>
-//#include <json/json.h>
 #include <stdlib.h>
-#include <string.h>
 #include <glib.h>
 #include <glib-object.h>
 #include <json-glib/json-glib.h>
 int main(int argc,char **argv)
     {
         JsonParser *parser;
-        JsonNode *root;
         GError *error;
-        error = NULL;
-        g_type_init();
         parser = json_parser_new();
-        json_parser_load_from_file(parser,"userinfo.json",&error);
+        json_parser_load_from_file(parser,"info.json",&error);
         if(error)
             {
-                g_print("Unable to parser,%s\n",error->message);
+                g_print("error is %s\n",error->message);
                 g_error_free(error);
                 g_object_unref(parser);
                 return EXIT_FAILURE;
             }
+        JsonNode *root;
+        //get the first node of json stream
         root = json_parser_get_root(parser);
-        guint a;
-        a = json_parser_get_current_line(parser);
-        guint b;
-        b = json_parser_get_current_pos(parser);
-        printf("current_line is %d,current_pos is %d\n",a,b);
-
-        printf("json node type is %d\n",JSON_NODE_TYPE(root));
-        if(JSON_NODE_HOLDS_OBJECT(root))
-            puts("holds object");
+        //judge the type of root
         if(JSON_NODE_HOLDS_ARRAY(root))
-            puts("holds array");
-        g_object_unref(parser);
+            {
+                puts("hold array\n");
+                JsonArray *array;
+                //array = json_array_new();
+                //get the array stored in the node
+                array = json_node_get_array(root);
+                g_print("the length of the array is %d\n",json_array_get_length(array));
+                root = json_array_get_element(array,0);
+                if(JSON_NODE_HOLDS_OBJECT(root))
+                    puts("hold object\n");
+            }
+        else
+            g_print("error\n");
         return EXIT_SUCCESS;
     }
