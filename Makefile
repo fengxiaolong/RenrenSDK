@@ -1,6 +1,6 @@
 object = main.o GetAccessToken.o GetUserInfo.o GetCurrentSessionID.o GetMultipleIcon.o
 all:$(object)
-	gcc -o all $(object) -lcurl -g
+	cc -o all $(object) -lcurl -g
 main.o:main.c GetAccessToken.h GetUserInfo.h AccessToken.h GetCurrentSessionID.o
 GetAccessToken.o:GetAccessToken.h AccessToken.h
 GetUserInfo.o:GetUserInfo.h AccessToken.h

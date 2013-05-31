@@ -12,26 +12,13 @@ void GetMultipleIcon(int n)
         strncpy(str,USERINFOURL,n1);
         str = strcat(str,ACCESS_TOKEN);
         str = strcat(str,"&format=JSON&call_id=1.0&method=users.getInfo&uids=");
+        FILE *filename = NULL;
         char number[20];
         char *error = NULL;
         sprintf(number,"%d",n);
         str = strcat(str,number);
         str = strcat(str,"&fields=mainurl");
-        FILE *filename = fopen("icon.json","w");
-        /*curl_easy_setopt(curl,CURLOPT_URL,URL);
-        curl_easy_setopt(curl,CURLOPT_POST,1L);
-        curl_easy_setopt(curl,CURLOPT_NOPROGRESS,0L);
-        curl_easy_setopt(curl,CURLOPT_POSTFIELDS,str);
-        curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1);
-        curl_easy_setopt(curl,CURLOPT_VERBOSE,0L);
-        curl_easy_setopt(curl,CURLOPT_HEADER,0L);
-        curl_easy_setopt(curl,CURLOPT_WRITEFUNCTION,write_data);
-        curl_easy_setopt(curl,CURLOPT_WRITEDATA,filename);
-        //curl_easy_perform(curl);
-        curl_easy_cleanup(curl);
-        curl_global_cleanup();*/
-        fclose(filename);
-        //free(str);
+        filename = fopen("icon.json","w");
         puts(str);
     }
 static size_t write_data(char *ptr,size_t size,size_t nmemb,void *userdata)
