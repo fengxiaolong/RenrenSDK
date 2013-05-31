@@ -7,6 +7,8 @@
       <in>GetAccessToken.h</in>
       <in>GetCurrentSessionID.c</in>
       <in>GetCurrentSessionID.h</in>
+      <in>GetMultipleIcon.c</in>
+      <in>GetMultipleIcon.h</in>
       <in>GetUserInfo.c</in>
       <in>GetUserInfo.h</in>
       <in>main.c</in>
@@ -27,7 +29,7 @@
     <conf name="Default" type="0">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
       </toolsSet>
       <codeAssistance>
       </codeAssistance>
@@ -36,24 +38,36 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>all</executablePath>
         </makeTool>
       </makefileType>
       <item path="AccessToken.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="GetAccessToken.c" ex="false" tool="0" flavor2="0">
+      <item path="GetAccessToken.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="GetAccessToken.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="GetCurrentSessionID.c" ex="false" tool="0" flavor2="0">
+      <item path="GetCurrentSessionID.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="GetCurrentSessionID.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="GetUserInfo.c" ex="false" tool="0" flavor2="0">
+      <item path="GetMultipleIcon.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GetMultipleIcon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GetUserInfo.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="GetUserInfo.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.c" ex="false" tool="0" flavor2="0">
+      <item path="main.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
     </conf>
   </confs>

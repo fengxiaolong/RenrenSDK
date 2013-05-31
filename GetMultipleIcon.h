@@ -1,9 +1,11 @@
-#ifndef GETUSERINFO
-#define GETUSERINFO
+#ifndef GETMULTIPLEICON
+#define GETMULTIPLEICON
+#include "AccessToken.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <curl/curl.h>
-#define USERINFOURL "v=1.0&access_token="
-int GetUserInfo(char *access_token);
+#include <error.h>
+void GetMultipleIcon(int n);
 static size_t write_data(char *ptr,size_t size,size_t nmemb,void *userdata);
 #endif

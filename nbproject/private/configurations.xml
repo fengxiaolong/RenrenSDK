@@ -4,16 +4,18 @@
     <df root="." name="RenrenSDK">
       <df name="json">
         <in>json.c</in>
-        <in>try_json.c</in>
       </df>
       <in>AccessToken.h</in>
       <in>GetAccessToken.c</in>
       <in>GetAccessToken.h</in>
       <in>GetCurrentSessionID.c</in>
       <in>GetCurrentSessionID.h</in>
+      <in>GetMultipleIcon.c</in>
+      <in>GetMultipleIcon.h</in>
       <in>GetUserInfo.c</in>
       <in>GetUserInfo.h</in>
       <in>main.c</in>
+      <in>usericon.c</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
