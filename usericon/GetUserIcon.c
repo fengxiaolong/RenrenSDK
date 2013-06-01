@@ -11,7 +11,7 @@ int Getusericon(int from,int to)
         curl_easy_reset(curl);
         char *str;
         //str = g_strdup_printf("http://www.renren.com/%d/profile?portal=",from);
-        str = g_strdup_printf("http://fenghelong.renren.com");
+        str = g_strdup_printf("http://name.renren.com/2342");
         puts(str);
         curl_easy_setopt(curl,CURLOPT_URL,str);
         curl_easy_setopt(curl,CURLOPT_HTTPGET,1L);
