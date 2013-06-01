@@ -8,6 +8,11 @@ int main(int argc,char **argv)
             //system("chromium result.html");
         GetUserInfo(ACCESS_TOKEN);
         GetCurrentSessionID(ACCESS_TOKEN);
-        GetMultipleIcon(2418);
+        int i = 0;
+        while(i < 2019)
+            {
+                GetMultipleIcon(i);
+                i++;
+            }
         return 0;
     }

@@ -8,7 +8,9 @@ void GetMultipleIcon(int n)
         FILE *filename;
         char str[200];
         sprintf(str,"v=1.0&access_token=%s&format=JSON&call_id=1.0&method=users.getInfo&uids=%d&fields=mainurl",ACCESS_TOKEN,n);
-        filename = fopen("icon.json","w+");
+        char name[20];
+        sprintf(name,"icon_%d.json",n);
+        filename = fopen("icon.json","a+");
         puts(str);
         curl_easy_setopt(curl,CURLOPT_URL,URL);
         curl_easy_setopt(curl,CURLOPT_POST,1L);

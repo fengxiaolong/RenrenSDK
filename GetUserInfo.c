@@ -20,7 +20,7 @@ int GetUserInfo(char *access_token)
         //        curl_easy_setopt(curl,CURLOPT_PROGRESSFUNCTION,progress);
         //        curl_easy_setopt(curl,CURLOPT_PROGRESSDATA,stderr);
         curl_easy_setopt(curl,CURLOPT_POSTFIELDS,str);
-        curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1);
+        curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1L);
         curl_easy_setopt(curl,CURLOPT_VERBOSE,0L);
         curl_easy_setopt(curl,CURLOPT_HEADER,0L);
         curl_easy_setopt(curl,CURLOPT_WRITEFUNCTION,write_data);
